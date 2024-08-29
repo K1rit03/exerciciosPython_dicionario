@@ -1,9 +1,11 @@
-dicionario = {'a' : 0,'e' : 0, 'o' : 0, 'u': 0}
+dicionario = {}
 texto = input('Insira o texto aqui:')
-vogais = 'aeiou'
+vogais = 'aeiou' 
 
 for caracter in texto:
     if caracter in vogais:
-        dicionario[caracter] += 1 
+        if caracter in dicionario:
+            dicionario[caracter] += 1
+        else:
+            [dicionario] = 1
 print(dicionario)
-
